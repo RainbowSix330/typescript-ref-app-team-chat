@@ -5,7 +5,12 @@ export const Wrapper = styled.section<{ pose: string }>`
   display: ${props => (props.pose === "closed" ? "none" : "flex")};
   flex-direction: column;
   background-color: #ffffff;
-  max-width: 290px;
+
+  //marked and add by rainbow//////////////////////////
+  //max-width: 290px;
+  max-width: 350px;
+  /////////////////////////////////////////////////////
+
   width: 100%;
   @media (max-width: 480px) {
     max-width: none;

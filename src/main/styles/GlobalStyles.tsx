@@ -19,6 +19,12 @@ const GlobalStyles = createGlobalStyle`
       #root {
         height: 100%;
       }
+
+      // add by rainbow/////////////////////////
+      #root {
+        padding: 130px 0 150px 0;
+      }
+      ////////////////////////////////////////
       
 `;
 
