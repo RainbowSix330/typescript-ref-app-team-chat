@@ -22,7 +22,7 @@ export const About = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 16px;
-  margin-top: 10px;
+  margin-top: 18px;
 `;
 
 export const UserName = styled.div`

@@ -12,12 +12,20 @@ import {
   Wrapper,
   Body,
   Information,
+  UserName,
+  Favorite,
   Name,
   Description,
   Border,
   BackIconWrapper
 } from "./Header.style";
 import { Back as BackIcon } from "foundations/components/icons/Back";
+
+//Added by rainbow///////////////////////////////////
+import { UserInitialsAvatar } from "foundations/components/UserInitialsAvatar";
+import { getUsersById } from "features/users/userModel";
+import { getLoggedInUserId } from "features/authentication/authenticationModel";
+/////////////////////////////////////////////
 
 export interface ConversationDescriptionFragment {
   id: string;
@@ -42,6 +50,10 @@ const Header = () => {
     getCurrentConversationDescription
   );
 
+  const userId = useSelector(getLoggedInUserId);
+  const usersById = useSelector(getUsersById);
+  const user = usersById[userId];
+
   const dispatch = useDispatch();
   return (
     <Wrapper>
@@ -54,12 +66,11 @@ const Header = () => {
           <BackIcon />
         </BackIconWrapper>
         <Information>
-          <Name>{conversation.name}</Name>
-          <Description>{conversation.description}</Description>
+          <UserInitialsAvatar size={60} name={user.name} uuid={user.id} />
+          <UserName>{user.name}</UserName>
         </Information>
-        <ConversationOccupancy />
+        <Favorite />
       </Body>
-      <Border />
     </Wrapper>
   );
 };

@@ -2,7 +2,13 @@ import styled from "styled-components/macro";
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: 90px;
+
+  //marked and added by rainbow//////////////////////////////
+  //height: 90px;
+  min-height: 100px;
+  border-bottom: 1px solid #ccc;
+  ///////////////////////////////////////////////////////
+
   display: flex;
   flex-direction: column;
   @media (max-width: 480px) {
@@ -24,7 +30,7 @@ export const Body = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 27px;
+  padding: 20px 29px;
 `;
 
 export const Border = styled.div`
@@ -36,11 +42,31 @@ export const Border = styled.div`
 `;
 
 export const Information = styled.div`
-  display: flex;
+  display: -webkit-box;
   height: 100%;
   flex-direction: column;
 `;
 
+export const UserName = styled.div`
+  font-size: 18px;
+
+  //marked and added by rainbow///////////////////////
+  //color: #585858;
+  //font-family: "Roboto", sans-serif;
+  //font-weight: 500;
+  font-weight: 400;
+  color: #222;
+  font-family: "Noto Sans KR", sans-serif;
+  /////////////////////////////////
+  margin-left: 40px;
+  line-height: 60px;
+`;
+
+export const Favorite = styled.div`
+  background-image: url(icon_star.gif);
+  width: 26px;
+  height: 23px;
+`;
 export const Name = styled.div`
   font-size: 15px;
   color: #585858;
