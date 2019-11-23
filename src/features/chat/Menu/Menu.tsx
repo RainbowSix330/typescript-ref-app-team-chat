@@ -15,7 +15,6 @@ const Menu = () => {
   return (
     <Panel ref={panel} pose={panels.Left ? "open" : "closed"}>
       <MyUserDetails />
-      <MyConversations />
     </Panel>
   );
 };

@@ -34,7 +34,7 @@ const MyUserDetails = () => {
     <Wrapper>
       <Avatar>
         <NetworkStatus />
-        <UserInitialsAvatar size={56} name={user.name} uuid={user.id} />
+        <UserInitialsAvatar size={60} name={user.name} uuid={user.id} />
       </Avatar>
       <About>
         <UserName>{user.name}</UserName>

@@ -12,6 +12,7 @@ export const Wrapper = styled.div<{ color: string; size: number }>`
   text-transform: uppercase;
   vertical-align: middle;
   background-color: ${props => props.color};
+  background-image: url(img_profile.jpg);
   width: ${props => props.size}px;
   font-size: ${props => Math.round(props.size / 3)}px;
   height: ${props => props.size}px;
@@ -46,14 +47,10 @@ const UserInitialsAvatar = ({
   muted,
   color
 }: UserInitialsAvatarProps) => {
-  const initials = name.match(/\b\w/g) || [];
+  const initials = name.match(/\b\w/g) || []; //marked by rainbow
   const uniqueColor = getUniqueColor(uuid, colorSet);
   const processedColor = muted ? setLightness(0.9, uniqueColor) : uniqueColor;
-  return (
-    <Wrapper size={size} color={color || processedColor}>
-      {initials}
-    </Wrapper>
-  );
+  return <Wrapper size={size} color={color || processedColor}></Wrapper>;
 };
 
 export { UserInitialsAvatar };
